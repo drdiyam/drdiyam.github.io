@@ -8,52 +8,107 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8; /* optional light background for contrast */
-    font-family: Arial, sans-serif;
-    color: #363638;
-  }
+    /* ✅ Make sure box model works as expected */
+    * {
+      box-sizing: border-box;
+    }
 
-  .content {
-    max-width: 800px;
-    margin: 40px auto;              /* center with top/bottom space */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    background-color: #fff;
-    text-align: justify;
-    width: 90%;                     /* allows slight flexibility on smaller screens */
-  }
+    /* ✅ Global body styles */
+    body {
+      margin: 40px;
+      padding: 100px; /* Adds space between content and screen edge */
+      background-color: #f8f8f8;
+      font-family: 'Open Sans', sans-serif;
+      color: #363638;
+    }
 
-  .custom-text {
-    /* Inherits font and color from body */
-    text-align: justify;
-  }
+    /* ✅ Content wrapper */
+    .content {
+      max-width: 800px;
+      margin: 0 auto; /* center horizontally */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      background-color: #fff;
+      text-align: justify;
+      width: 80%; /* Let it take full width within max-width */
+    }
 
-  .c2 {
-    width: 100%;
-    text-align: center;
-  }
+    .custom-text {
+      text-align: justify;
+    }
 
-  .style2 {
-    color: #000000;
-  }
+    .c2 {
+      width: 100%;
+      text-align: center;
+    }
 
-  a:link {
-    color: #0066FF;
-  }
+    .style2 {
+      color: #000000;
+    }
 
-  a:visited {
-    color: #4B0082;
-  }
+    a:link {
+      color: #0066FF;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+    a:visited {
+      color: #4B0082;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+    <style>
+    /* 🔹 Top line across the full width */
+    .top-line {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #0066FF; /* Blue color */
+      z-index: 1000; /* Ensure it stays on top */
+    }
+
+    /* 🔹 Navigation bar styles */
+    nav {
+      position: fixed;
+      top: 5px; /* Just below the top line */
+      left: 0;
+      width: 100%;
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      text-align: center;
+      z-index: 999; /* Just below the top line */
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #363638;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Top line across the full width -->
+  <div class="top-line"></div>
+
+  <!-- 🔹 Navigation bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="biosketch.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="section-one.html">Deep Dive</a>
+  </nav>
 </head>
 
 
@@ -67,7 +122,7 @@
         </div>
     </header>
 
-    
+
     <!-- Main Content -->
     <div id="main">
         <p class="custom-text">
@@ -83,53 +138,58 @@
         <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=(Mohan%2C%20Srividya%5BFull%20Author%20Name%5D%20)%20AND%20((%22rna%22%5BMeSH%20Terms%5D%20OR%20%22rna%22%5BAll%20Fields%5D)%20OR%20(%22dna%22%5BMeSH%20Terms%5D%20OR%20%22dna%22%5BAll%20Fields%5D))&cmd=DetailsSearch">Publications</a>
     </p>
 
-    <!-- Biosketch Section -->
-    <section id="five">
-      <h3 class="custom-text" style="text-align: center;"><em><b>Research and Experiences</b></em></h3>
-         <p class="custom-text">
-               <!-- <span class="image left" style="width: 300px; float: left; margin-right: 25px;">
-                <img src="images/JimWatson_Diya-111.jpg" alt="" style="width: 100%;" />
-                <i>Dr. Mohan with Dr. James Watson, Nov. 2016, Banbury Center, Connecticut.</i>
-                <br>
-                <br>
-            </span> -->
-            I earned her M.S. in Bioinformatics and PhD in Biochemistry (interdisciplinary) from Georgia Tech, Atlanta. My PhD dissertation work was a combination of computational and experimental approaches for 3D pattern recognition and datamining and the biochemical relevance of these structures to function in RNA, DNA and protein molecules. My work showed that RNA uses similar geometries to stabilize seemingly divergent 3D motifs, suggesting that a subset of structural building blocks combine to form complex tertiary 3D shapes.
-        </p>
-        <p class="custom-text">
-            As a postdoctoral scientist in Prof. Harry Noller's lab, I developed innovative computational pattern recognition and 3D motion quantification tools for large databases of macromolecular dynamics and published my work in high impact journals. I showed that dimensionality reduction strategies and statistical correlations can help manage large volumes of data. By correlating with biological relevance, my work help identify a novel mechanism of motion in the highly conserved ribosome (the molecule that universally translates mRNA to protein). This work also showed how the antibiotic spectinomycin stalls bacterial ribosome function.  See <a href="section-one.html" class="custom-text">here</a> for more details. In my leadership role as the chair of the <a href="https://sciencepostdocs.sites.ucsc.edu/">UCSC</a> UCSC Postdocs Association, I implemented new platforms for scientific exchange and socialization among postdocs and the UCSC community, organized multiple workshops throughout the year, including the UCSC Annual Postdoc Symposium in 2017.
-        </p>
-        <p class="custom-text">
-            In my industry role at Thermo Fisher Scientific, I contributed to multiple bioinformatics projects related to precision medicine and carrier screening assays. I am a co-author on a patent application for a novel spinal muscular atrophy (SMA) detection algorithm. I lead the bioinformatics for a prenatal test and I worked on multiple projects relating to better detection of alpha-thalassemia gene (HBA) variations. I presented my work on SMA and HBA at multiple international conferences. 
-        </p>
-        <p class="custom-text">
-            I work with start-ups in the biotech industry as a technical data science consultant and an advisor. I am passionate about mentoring young scientists and fostering diversity in STEM fields. I have participated in numerous outreach programs aimed at encouraging underrepresented groups to pursue careers in science and technology.
-        </p>
-
-    </section>
 
     <!-- Research Section -->
     <section id="new-section">
         <header class="major">
-          <h3 class="custom-text" style="text-align: center;"><em><b>Deep Dive </b></em></h3>
+          <h3 class="custom-text" style="text-align: center;"><em><b>Learn More </b></em></h3>
         </header>
             <ul class="custom-text" style="text-align: center;">
-                <p>Highlights from my postdoctoral research: <a href="section-one.html" class="custom-text">RNA as a molecular machine</a></p>
+                 <p>Highlights from my computational biology work to study RNA structure-function: <a href="section-one.html" class="custom-text">RNA as a molecular machine</a></p>
                 <p><a href="http://rna.ucsc.edu/rnacenter/euler-rod/" class="custom-text">Axis-Angle calculator for biomolecular domain motions</a></p>
-                <p></p>
-                <p> See the lab in action in <a href="https://youtu.be/mCwRz8ANaYE">UCSC's video tribute</a> to Prof. Harry Noller for his 2017 <a href="https://breakthroughprize.org" >Breakthrough Prize </a></p>
-                <p> The <a href="https://www.techwomen.org" class="custom-text">Techwomen</a> Program
-
+                 <p> <a href="https://www.bitsinbio.org" class="custom-text">Bits in Bio</a></p>
+                 <p> <a href="https://www.techwomen.org" class="custom-text">The TechWomen Program</a></p>
+                 <p> <a href="https://www.califesciences.org/fast-program/" class="custom-text">California Life Sciences</a></p>
             </ul>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="inner">
-            <ul class="copyright">
-                <li>&copy; Srividya Mohan</li>
-            </ul>
-        </div>
-    </footer>
+
+
+
+<style>
+  #footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+
+  #footer .inner {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  #footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #footer ul li {
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+</style>
+
+<footer id="footer">
+  <div class="inner">
+    <ul class="copyright">
+      <li>&copy; 2025 Srividya Mohan</li>
+    </ul>
+  </div>
+</footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
