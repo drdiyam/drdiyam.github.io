@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mechanics of Movement in Biomolecular Machines</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .custom-text {
+            font-family: 'Open Sans', sans-serif;
+            color: #383736; 
+        }
+        .style2 {
+            color: #000000;
+        }
+    </style>
+</head>
+<body id="top">
+    <header id="header">
+        <div class="inner" style="text-align: center;">
+
+            <h2 class="custom-text"><em><b>Mechanics of Movement and Alternate Conformations in Biomolecular Machines</b><br /></em></h2>
+        </div>
+    </header>
+    <div id="main"></div>
+    <!-- One -->
+
+    <section id="one" style="margin: 0 80px;">
+        <p class="custom-text">
+
+            Studying structure-function relationships, particularly in large molecular complexes presents a 'big data' challenge. With a current database of &gt;1000 ribosome structures available in the <a href="https://www.rcsb.org/pdb/home/home.do" class="custom-text">PDB</a>, this 3.5 MDa macromolecular machine represents a prime example of the challenge of extracting meaningful information from large volumes of biological data. 
+
+            As a part of my postdoctoral work, I developed a comparative analysis approach (below) for quantifying 3-D domain motions using multiple dimensionality reduction strategies that circumvented the need for lage comput power.
+            
+        </p>
+    </section>
+
+    <section id="four" style="margin: 0 80px;">
+        <p class="custom-text">
+        <h3 class="custom-text">Comparative structure analysis approach to study conformational dynamics </h2>
+        
+         <h4 class="custom-text">Challenges in harnessing the structural database</h4>       
+         <p class="custom-text">  Due to the improving cryo-EM and crystallography techniques of data collection, the structural database has seen a dramatic increase in the number of entries in recent years for nearly all macromolecular complexes. In the case of ribosomes, each bacterial structure consists of approximately 7 RNA chains and 55 protein chains - i.e., ~ 1.5x10<sup>5</sup> atoms per file! Additionally, each atomic position is represented by four parameters - X, Y, Z coordinates and sequence identity. That information is further layered with at least three significant domain motions across different states, presenting an information management challenge. 
+      
+    The challenges of how best to utilize this large database of information, or more specifically:</p>
+    <ul>
+        <li class="custom-text"> How does one statistically  quantify  conformational similarities and differences?</li>
+         <li class="custom-text"> With only a few multi-domain RNA-protein complexes available with better than 3A resolution, how can genuine conformational variation be distinguished from noise in the large majority of low resolution structures? </li>
+         <li class="custom-text"> To understand structure-function relationships during a biological process using static 3D structures, how can on- vs off- pathway states be distinguished?</li>
+                         
+                         </ul>
+                         
+     <h4 class="custom-text">Developing computational approaches</h4> 
+                       
+    <ul class="custom-text">
+    <i> A significant contribution of this <a href="https://www.pnas.org/doi/10.1073/pnas.1413731111">PNAS</a> work has been in uniformly quantifying minimum vs. maximum domain motions in all available ribosome structures. The axis of rotation and the magnitude of movement for any domain motion can be calculated using this PyMol <a href="http://rna.ucsc.edu/rnacenter/euler-rod/">plug-in</a>. </i>
+
+
+        I have developed computational tools that simplify complex 3D information. These offer statistically reliable parameters for differentiating between conformational states in lower resolution data 
+
+        calculating Euler angles of domain rotations about the X, Y, or Z direction, helical axes, angular differences between junctions, changes in groove witdhs
+                           
+     A key element of computational work is putting it in context of biological systems and complex biochemical networks. In combination with experimental methods such as mutational analysis and FRET experiments, observed alternate conformations are  clustered by functional relevance, thus allowing for statistical bootstrapping within a subset. 
+                        </ul>
+                         </p>
+
+            </article>
+                          <p class="style2"> <br><a href="#main">Top</a></p></br></p>
+                        </p>
+                          </section>
+              <hr width=100%  align=center> 
+
+
+
+            
