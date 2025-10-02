@@ -8,9 +8,12 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="publications.html">Publications</a>
+<nav>
+  <a href="{{ '/' | relative_url }}">Home Page</a>
+  <a href="{{ '/about/' | relative_url }}">About Me</a>
+  <a href="{{ '/Deep Dive/' | relative_url }}">Deep Dive</a>
+  <a href="{{ '/Publications/' | relative_url }}">Publications</a>
+</nav>
   </nav>
   <main>
     {{ content }}
